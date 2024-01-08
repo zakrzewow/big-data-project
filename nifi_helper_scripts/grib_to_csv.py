@@ -9,13 +9,8 @@ if __name__ == "__main__":
     parser.add_argument("--output")
     args = parser.parse_args()
 
-    longitude = np.concatenate(
-        [
-            np.linspace(0, 15, 31),
-            np.linspace(355, 359.5, 10),
-        ]
-    )
-    latitude = np.linspace(40, 55, 31)
+    longitude = np.linspace(5, 15, 21)
+    latitude = np.linspace(45, 55, 21)
 
     (
         xr.open_dataset(
