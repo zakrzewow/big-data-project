@@ -1,0 +1,8 @@
+CREATE EXTERNAL TABLE gefs
+(latitude DOUBLE, longitude DOUBLE, time TIMESTAMP, valid_time TIMESTAMP, u10 DOUBLE, v10 DOUBLE)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\073'
+LINES TERMINATED BY '\n'
+LOCATION '/user/bigdataproject/gefs/table';
+
+ALTER TABLE gefs SET SERDEPROPERTIES ("timestamp.formats"="yyyy-MM-dd");
