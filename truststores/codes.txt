@@ -1,0 +1,5 @@
+keytool -genkeypair -alias dummy -keyalg RSA -keystore truststore.jks -storepass password
+keytool -delete -alias dummy -keystore truststore.jks -storepass password
+
+keytool -import -alias server -file server.crt -keystore truststore.jks -storepass password
+keytool -import -alias intermediate -file intermediate.crt -keystore truststore.jks -storepass password
